@@ -1,0 +1,17 @@
+.profile{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width:80%;
+}
+
+.top{
+    /* background: linear-gradient(170.85deg, #1E3163 -174.82%, rgba(234, 68, 68, 0) 86.95%); */
+    background: linear-gradient(110.85deg, #1E3163 -174.82%, rgba(234, 68, 68, 0) 160.95%);
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+}
+
+@media (max-width:1025px) {
+    .profile{
+        width:90%;
+    }
+}

@@ -1,0 +1,28 @@
+.contact-form {
+    box-shadow: 2px 4px 12px #d9d9d9, -2px 9px 5px #ffffff;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+    max-width: 600px;
+  }
+  .getInTouch {
+    /* box-shadow: 2px 4px 12px #d9d9d9, -2px 9px 5px #ffffff; */
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    left: -60px;
+  }
+
+  .input_field {
+      border-bottom: 1px solid;
+  }
+
+@media (max-width:500px) {
+    .contact-form {
+        max-width: 350px;
+    }
+    .getInTouch {
+      left: 0;
+      right: 0;  
+      top: -35px;
+      margin: 0 auto;
+    }
+}
