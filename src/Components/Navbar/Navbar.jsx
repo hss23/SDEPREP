@@ -20,12 +20,6 @@ function useOnClickOutside(ref, handler) {
           document.removeEventListener("touchstart", listener);
         };
       },
-      // Add ref and handler to effect dependencies
-      // It's worth noting that because passed in handler is a new ...
-      // ... function on every render that will cause this effect ...
-      // ... callback/cleanup to run every render. It's not a big deal ...
-      // ... but to optimize you can wrap handler in useCallback before ...
-      // ... passing it into this hook.
       [ref, handler]
     );
   }
@@ -33,6 +27,7 @@ const Navbar = () => {
 
     const [open, setOpen] = useState(false)
     const Dropdownref = useRef(null);
+    
     useOnClickOutside(Dropdownref, () => setOpen(false));
     return (
         <nav className="w-full fixed top-0 h-16 flex justify-between items-center text-white px-8 md:px-10 z-50">
