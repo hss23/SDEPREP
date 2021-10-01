@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import React, { useContext, useState, useEffect } from 'react'
 import { getAuth, GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 const AuthContext = React.createContext()
 
 const app = initializeApp({
@@ -14,6 +15,7 @@ const app = initializeApp({
     measurementId: process.env.REACT_APP_MEASUREMENT_ID
 });
 const auth = getAuth();
+const db = getFirestore();
 export function useAuth() {
     return useContext(AuthContext);
 }
@@ -68,7 +70,8 @@ export function AuthProvider({ children }) {
         login,
         logout,
         resetPassword,
-        googleSignIn
+        googleSignIn,
+        db
     }
 
     return (

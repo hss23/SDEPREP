@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ChatBot from '../../Components/Chatbot/Chatbox';
 import ChatButton from '../../Components/Chatbot/Chatbox';
 import Navbar from '../../Components/Navbar/Navbar';
@@ -15,7 +16,7 @@ const Dashboard = () => {
                     <p className="mb-20 text-center font-semibold text-xs">Believe in yourself, take on your challenges, dig deep within yourself to conquer fears.</p>
                     <div className="flex flex-col items-start mx-auto h-full first-container">
                         <div className="w-1 absolute center-line hidden md:flex"></div>
-                        <button type="button" className="w-full flex justify-start relative mb-10 md:mb-0 cards cards-left cards-left-line">
+                        <Link to="/questions" className="w-full flex justify-start relative mb-10 md:mb-0 cards cards-left cards-left-line">
                             {/* <div className="w-1 absolute middle-line-right"></div> */}
                             {/* <label className="w-10 h-10 flex justify-center items-center rounded-full subjectName mr-2 absolute"><h1 className="text-xs text-white font-semibold mb-0" style={{ }}>DBMS</h1></label> */}
                             <label className="w-10 h-10 hidden md:flex justify-center items-center rounded-full subjectName-left mr-2 absolute z-40"><h1 className="text-xs text-white font-semibold mb-0" style={{ }}>DS</h1></label>
@@ -37,7 +38,7 @@ const Dashboard = () => {
                                     </div>
                                 </div>
                             </div>
-                        </button>   
+                        </Link>   
                         <button type="button" className="w-full flex justify-end relative mb-10 md:mb-0 cards cards-right cards-right-line">  
                             {/* <div className="w-1 absolute middle-line-left"></div> */}
                             {/* <label className="w-10 h-10 flex justify-center items-center rounded-full subjectName mr-2 absolute"><h1 className="text-xs text-white font-semibold mb-0" style={{ }}>OOPS</h1></label>    */}
